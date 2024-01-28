@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
-import 'markdown_demo_widget.dart';
-
 const String _markdownData = """
 # Markdown Example
 Markdown allows you to easily include formatted text, images, and even formatted
@@ -136,24 +134,10 @@ is being preserved for reference purposes.
 This demo example is being preserved for reference purposes.
 """;
 
-class OriginalMarkdownDemo extends StatelessWidget
-    implements MarkdownDemoWidget {
+class OriginalMarkdownDemo extends StatelessWidget {
   OriginalMarkdownDemo({super.key});
 
   static const String _title = 'Original Markdown Demo';
-
-  @override
-  String get title => OriginalMarkdownDemo._title;
-
-  @override
-  String get description => 'The original demo example. This demo was '
-      'include with versions of the package prior to version 0.4.4.';
-
-  @override
-  Future<String> get data => Future<String>.value(_markdownData);
-
-  @override
-  Future<String> get notes => Future<String>.value(_notes);
 
   final ScrollController controller = ScrollController();
 

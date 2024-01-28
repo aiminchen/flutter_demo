@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
         alignment: Alignment.center,
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 1250),
-          child: const SubscriptSyntaxDemo(),
+          child: OriginalMarkdownDemo(),
         ),
       ),
     );
